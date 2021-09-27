@@ -1,0 +1,42 @@
+C51 COMPILER V9.57.0.0   LED_BLINK                                                         05/24/2019 20:31:42 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE LED_BLINK
+OBJECT MODULE PLACED IN .\Objects\Led_blink.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Led_blink.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\Led_blink.lst) TABS(2) OBJECT(.\Objects\Led_blink.obj)
+
+line level    source
+
+   1          //Make the led blink
+   2          #include<reg51.h>
+   3          int i;
+   4          sbit led = P1^1;
+   5          #define delay for(i = 0;i<10000;i++)
+   6          main()
+   7          {
+   8   1        while(1)
+   9   1        {
+  10   2          if (led==1) {
+  11   3            led = 0; }
+  12   2          else {
+  13   3            led = 1; }
+  14   2          
+  15   2          delay;
+  16   2        }
+  17   1      }
+  18            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     37    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

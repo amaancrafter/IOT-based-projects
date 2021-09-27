@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\7 segment display(cc).obj" 
+TO ".\Objects\7 segment(cc)" 
+PRINT(".\Listings\7 segment(cc).m51")

@@ -1,0 +1,47 @@
+C51 COMPILER V9.57.0.0   7_SEGMENT_DISPLAY_CC_                                             05/24/2019 22:29:07 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE 7_SEGMENT_DISPLAY_CC_
+OBJECT MODULE PLACED IN .\Objects\7 segment display(cc).obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 7 segment display(cc).c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRIN
+                    -T(.\Listings\7 segment display(cc).lst) TABS(2) OBJECT(.\Objects\7 segment display(cc).obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          unsigned int a[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F} ;
+   3          void delay(unsigned int);
+   4          
+   5          main()
+   6          {
+   7   1        unsigned int i;
+   8   1        while(1)
+   9   1        {
+  10   2          for(i=0;i<10;i++)
+  11   2          {
+  12   3            P1 = a[i];
+  13   3            delay(1000000000);
+  14   3          }
+  15   2        }
+  16   1      }
+  17          
+  18          void delay(unsigned int itime)
+  19          {
+  20   1        unsigned int i,j;
+  21   1        for(i=0;i<itime;i++);
+  22   1        for(j=0;j<1275;j++);
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     74    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     20       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
